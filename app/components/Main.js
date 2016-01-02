@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchGithub from './SearchGithub'
+import SearchGithub from './Github/Search';
 
 const Main = ({children, history}) => {
   return (
