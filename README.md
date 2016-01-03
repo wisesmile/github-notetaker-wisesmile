@@ -1,7 +1,7 @@
 # github-notetaker-wisesmile
 
+# run webpack
 ```bash
-npm install
 webpack -w
 ```
 
