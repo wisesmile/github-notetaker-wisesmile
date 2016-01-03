@@ -7,7 +7,7 @@
     "test": "mocha './src/**/*.spec.js' --compilers js:babel-core/register",
     "serve": "webpack-dev-server --content-base public/ --no-info"
   },
-  "author": "Tyler McGinnis <tylermcginnis33@gmail.com> (http://tylermcginnis.com)",
+  "author": "Paz via Tyler McGinnis",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.8.0",

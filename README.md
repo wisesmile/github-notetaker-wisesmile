@@ -3,8 +3,16 @@
 ```bash
 npm install
 webpack -w
+```
+
+# run server
+```bash
+npm run serve
+```
+
+# lint
+```bash
 gulp lint
-webpack-dev-server
 ```
 
 # webpack-dev-server
@@ -19,9 +27,5 @@ https://s3.amazonaws.com/wise-work/github-notebook/index.html
 # Application Notes
 - react wants multiple and reusable components
 - map allows for iterating through an array
-
-# Gitflow
-- each work session is a feature start
-- push to remote is fine, delete local
 
 [Build Your First React App](https://egghead.io/series/build-your-first-react-js-application)
