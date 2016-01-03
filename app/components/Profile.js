@@ -1,55 +1,52 @@
-import React from 'react'
-import Repos from './Github/Repos';
-import UserProfile from './Github/UserProfile';
-import Notes from './Notes/Notes';
-import getGithubInfo from '../utils/helpers';
-import Rebase from 're-base';
+import React          from 'react';
+import Repos          from './Github/Repos';
+import UserProfile    from './Github/UserProfile';
+import Notes          from './Notes/Notes';
+import getGithubInfo  from '../utils/helpers';
+import Rebase         from 're-base';
 
-// this is working fine
-// const base = Rebase.createClass('https://github-note-taker.firebaseio.com/')
-
-const base = Rebase.createClass('https://ws-notetaker.firebaseio.com/')
+const base = Rebase.createClass('https://ws-notetaker.firebaseio.com/');
 
 class Profile extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       notes: [],
       bio: {},
-      repos: []
-    }
+      repos: [],
+    };
   }
-  componentDidMount(){
-    this.init(this.props.params.username)
+  componentDidMount() {
+    this.init(this.props.params.username);
   }
-  componentWillReceiveProps(nextProps){
+  componentWillReceiveProps(nextProps) {
     base.removeBinding(this.ref);
     this.init(nextProps.params.username);
   }
-  componentWillUnmount(){
+  componentWillUnmount() {
     base.removeBinding(this.ref);
   }
-  init(username){
+  init(username) {
     this.ref = base.bindToState(username, {
       context: this,
       asArrray: true,
-      state: 'notes'
+      state: 'notes',
     });
 
     getGithubInfo(username)
-      .then(function(data){
+      .then(function(data) {
         this.setState({
           bio: data.bio,
-          repos: data.repos
-        })
-      }.bind(this))
+          repos: data.repos,
+        });
+      }.bind(this));
   }
-  handleAddNote(newNote){
+  handleAddNote(newNote) {
     base.post(this.props.params.username, {
-      data: this.state.notes.concat([newNote])
-    })
+      data: this.state.notes.concat([newNote]),
+    });
   }
-  render(){
+  render() {
     return (
       <div className="row">
         <div className="col-md-4">
@@ -65,8 +62,8 @@ class Profile extends React.Component {
             addNote={(newNote) => this.handleAddNote(newNote)} />
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Profile
+export default Profile;

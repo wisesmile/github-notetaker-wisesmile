@@ -2,15 +2,15 @@ import React from 'react';
 import Router from 'react-router';
 
 class SearchGithub extends React.Component {
-  getRef(ref){
+  getRef(ref) {
     this.usernameRef = ref;
   }
-  handleSubmit(){
+  handleSubmit() {
     const username = this.usernameRef.value;
     this.usernameRef.value = '';
-    this.props.history.pushState(null, "/profile/" + username)
+    this.props.history.pushState(null, '/profile/' + username);
   }
-  render(){
+  render() {
     return (
       <div className="col-sm-12">
         <form onSubmit={() => this.handleSubmit()}>
@@ -22,12 +22,12 @@ class SearchGithub extends React.Component {
           </div>
         </form>
       </div>
-    )
+    );
   }
 }
 
 SearchGithub.PropTypes = {
-  history: React.PropTypes.object.isRequired
-}
+  history: React.PropTypes.object.isRequired,
+};
 
 export default SearchGithub;
