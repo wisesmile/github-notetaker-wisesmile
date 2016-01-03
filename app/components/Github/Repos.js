@@ -3,7 +3,7 @@ import React from 'react';
 const Repos = ({repos}) => {
   return (
     <div>
-      <h3> User Repos </h3>
+      <h3>User Repos</h3>
       <ul className="list-group">
         {repos.map((repo, index) => {
           return (
