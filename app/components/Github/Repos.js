@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Repos = ({repos}) => {
   return (
@@ -11,16 +11,16 @@ const Repos = ({repos}) => {
               {repo.html_url && <h4><a href={repo.html_url}>{repo.name}</a></h4>}
               {repo.description && <p>{repo.description}</p>}
             </li>
-          )
+          );
         })}
       </ul>
     </div>
-  )
-}
+  );
+};
 
 Repos.propTypes = {
   username: React.PropTypes.string.isRequired,
-  repos: React.PropTypes.array.isRequired
-}
+  repos: React.PropTypes.array.isRequired,
+};
 
-export default Repos
+export default Repos;

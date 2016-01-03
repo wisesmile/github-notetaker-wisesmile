@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const NotesList = ({notes}) => {
   return (
@@ -7,11 +7,11 @@ const NotesList = ({notes}) => {
         <li className="list-group-item" key={index}>{note}</li>
       ))}
     </ul>
-  )
-}
+  );
+};
 
 NotesList.propTypes = {
-  notes: React.PropTypes.array.isRequired
-}
+  notes: React.PropTypes.array.isRequired,
+};
 
-export default NotesList
+export default NotesList;
