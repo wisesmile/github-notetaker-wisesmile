@@ -1,12 +1,12 @@
 import React from 'react';
 
-/**
- * stateless function
- * removal of curly braces signfies the presence of implicit return
- * destructure props
- * https://egghead.io/lessons/react-building-stateless-function-components-new-in-react-0-14
- */
 const UserProfile = ({bio}) => (
+  /**
+   * stateless function
+   * removal of curly braces signfies the presence of implicit return
+   * destructure props
+   * https://egghead.io/lessons/react-building-stateless-function-components-new-in-react-0-14
+   */
   <div>
     {bio.avatar_url && <li className="list-group-item"> <img src={bio.avatar_url} className="img-rounded img-responsive"/></li>}
     {bio.name && <li className="list-group-item">Name: {bio.name}</li>}

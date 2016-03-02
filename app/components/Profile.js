@@ -46,6 +46,11 @@ class Profile extends React.Component {
       data: this.state.notes.concat([newNote]),
     });
   }
+
+  /**
+   * render
+   * @return {ReactElement} markup
+   */
   render() {
     return (
       <div className="row">

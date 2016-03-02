@@ -28,4 +28,5 @@ https://s3.amazonaws.com/wise-work/github-notebook/index.html
 - react wants multiple and reusable components
 - map allows for iterating through an array
 
-[Build Your First React App](https://egghead.io/series/build-your-first-react-js-application)
+## Inspired by
+- [Build Your First React App](https://egghead.io/series/build-your-first-react-js-application)

@@ -1,5 +1,10 @@
 import React from 'react';
 
+/**
+ * @todo support multi byte character.
+ * @todo cache calculation result.
+ */
+
 const Repos = ({repos}) => {
   return (
     <div>
@@ -18,6 +23,11 @@ const Repos = ({repos}) => {
   );
 };
 
+/**
+ * propTypes
+ * @property {string} username github username
+ * @property {string} github repos
+ */
 Repos.propTypes = {
   username: React.PropTypes.string.isRequired,
   repos: React.PropTypes.array.isRequired,
